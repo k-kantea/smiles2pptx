@@ -1,0 +1,13 @@
+# Output that can be made again (folders whose names start with _)
+_*/
+# Temporary files that PowerPoint makes while a deck is open
+~$*
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+# Package build output
+build/
+dist/
+*.egg-info/

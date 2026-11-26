@@ -1,0 +1,22 @@
+[
+  {"id": "decanoic", "name": "decanoic acid (long chain)", "smiles": "CCCCCCCCCC(=O)O", "target": true},
+  {"id": "glycine", "name": "glycine (small molecule)", "smiles": "NCC(=O)O", "target": true},
+  {"id": "menthol", "name": "menthol (ring substituents, stereocentres)", "smiles": "CC(C)[C@@H]1CC[C@@H](C)C[C@H]1O", "target": true},
+  {"id": "nabenzoate", "name": "sodium benzoate (two fragments, charges)", "smiles": "O=C([O-])c1ccccc1.[Na+]", "target": true},
+  {"id": "tbuphenol", "name": "4-tert-butylphenol (branching)", "smiles": "CC(C)(C)c1ccc(O)cc1", "target": true},
+  {"id": "aspirin", "name": "aspirin (ortho substitution)", "smiles": "CC(=O)Oc1ccccc1C(=O)O", "target": true},
+  {"id": "caffeine", "name": "caffeine (fused heterocycles)", "smiles": "Cn1cnc2c1c(=O)n(C)c(=O)n2C", "target": true},
+  {"id": "mepyridinium", "name": "N-methylpyridinium (charged aromatic ring)", "smiles": "C[n+]1ccccc1", "target": true},
+  {"id": "crotonic", "name": "crotonic acid (E double bond)", "smiles": "C/C=C/C(=O)O", "target": true},
+  {"id": "glucose", "name": "glucose (stereocentres)", "smiles": "OC[C@H]1OC(O)[C@H](O)[C@@H](O)[C@@H]1O", "target": true},
+  {"id": "spiro", "name": "spiro[4.5]decane", "smiles": "C1CCC2(CC1)CCCC2", "target": true},
+  {"id": "dbu", "name": "DBU (bicyclic amidine)", "smiles": "C1CCC2=NCCCN2CC1", "target": true},
+  {"id": "pph3", "name": "triphenylphosphine (crowded)", "smiles": "c1ccc(cc1)P(c2ccccc2)c3ccccc3", "target": true},
+  {"id": "cholesterol", "name": "cholesterol (four fused rings)", "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CC=C4[C@@]3(CC[C@@H](C4)O)C)C", "target": true},
+  {"id": "crown", "name": "18-crown-6 (macrocycle)", "smiles": "C1COCCOCCOCCOCCOCCO1", "target": true},
+  {"id": "camphor", "name": "camphor (bridged)", "smiles": "CC1(C)C2CCC1(C)C(=O)C2", "target": false},
+  {"id": "adamantane", "name": "adamantane (bridged)", "smiles": "C1C2CC3CC1CC(C2)C3", "target": false},
+  {"id": "morphine", "name": "morphine (fused and bridged)", "smiles": "CN1CC[C@]23[C@@H]4[C@H]1CC5=C2C(=C(C=C5)O)O[C@H]3[C@H](C=C4)O", "target": false},
+  {"id": "strychnine", "name": "strychnine (complex polycycle)", "smiles": "O=C1C[C@H]2OCC=C3CN4CC[C@@]56[C@H]4C[C@H]3[C@H]2[C@H]6N1c1ccccc15", "target": false},
+  {"id": "cubane", "name": "cubane (cage)", "smiles": "C12C3C4C1C5C2C3C45", "target": false}
+]

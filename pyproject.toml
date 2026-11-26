@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smiles2pptx"
+dynamic = ["version"]
+description = "Draw chemical structures from SMILES as editable PowerPoint shapes, in pure Python with no dependencies"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["chemistry", "SMILES", "PowerPoint", "pptx", "structure drawing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+smiles2pptx = "smiles2pptx.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "smiles2pptx.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["smiles2pptx*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

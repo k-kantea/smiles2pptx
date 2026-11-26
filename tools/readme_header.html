@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- Template for docs/header-light.png and docs/header-dark.png, filled in by
+     tools/make_readme_images.py (string.Template; a literal dollar sign is written twice). -->
+<html><head><meta charset="utf-8"><style>
+html { zoom: 2 }
+* { box-sizing: border-box; margin: 0 }
+body { width: ${page_w}px; height: ${page_h}px; overflow: hidden; background: $bg;
+  font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  display: flex; align-items: center; justify-content: center }
+.bar { height: 34px; display: flex; align-items: center; padding: 0 14px; gap: 7px; position: relative }
+.bar span { position: absolute; left: 0; right: 0; text-align: center; font-size: 13.5px; letter-spacing: .2px }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: #ff5f57 }
+.dot:nth-child(2) { background: #febc2e }
+.dot:nth-child(3) { background: #28c840 }
+
+.term { width: 392px; border-radius: 12px; background: #0f141b; box-shadow: $shadow; overflow: hidden;
+  border: 1px solid #232a33 }
+.term .bar { background: #161c24; border-bottom: 1px solid #232a33 }
+.term .bar span { color: #8b949e }
+pre { font-family: Consolas, monospace; font-size: 14.5px; line-height: 1.75; color: #e6edf3; padding: 18px 20px 20px }
+.prompt { color: #7ee787 } .cmd { color: #fff; font-weight: bold } .str { color: #ffa657 }
+.str b { color: #ffcf99; font-weight: normal }
+.opt { color: #79c0ff } .out { color: #8b949e }
+
+.arrow { width: 96px; height: 40px; position: relative }
+.arrow:before { content: ""; position: absolute; left: 12px; right: 20px; top: 19px; height: 2.5px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #6366f1) }
+.arrow:after { content: ""; position: absolute; right: 17px; top: 13.5px; width: 12px; height: 12px;
+  border-top: 2.5px solid #6366f1; border-right: 2.5px solid #6366f1; transform: rotate(45deg); border-radius: 1px }
+
+.win { width: ${slide_w}px; border-radius: 12px; overflow: hidden; box-shadow: $shadow; border: 1px solid $barline;
+  background: #fff }
+.win .bar { background: $bar; border-bottom: 1px solid $barline }
+.win .bar span { color: $title }
+.slide { position: relative; width: ${slide_w}px; height: ${slide_h}px; background: #fff }
+.slide img { position: absolute; left: ${mol_x}px; top: ${mol_y}px; width: ${mol_w}px; height: ${mol_h}px }
+.slide svg { position: absolute; left: 0; top: 0; overflow: visible }
+.sel { position: absolute; border: 1px solid $select }
+.handle { position: absolute; width: 5.5px; height: 5.5px; margin: -2.75px 0 0 -2.75px; border-radius: 50%;
+  background: #fff; border: 1.2px solid $select }
+.label { position: absolute; font-size: 13.5px; line-height: 1; padding: 6px 10px; border-radius: 999px;
+  background: $label_bg; border: 1px solid $label_border; color: $label_text; white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08) }
+.label em { font-style: normal; color: $accent; font-weight: 600; margin-left: 5px }
+</style></head><body>
+
+<div class="term">
+  <div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>Terminal</span></div>
+<pre><span class="prompt">$$</span> <span class="cmd">smiles2pptx</span> \
+    <span class="str">"$smiles"</span> \
+    <span class="opt">-o</span> $pptx
+<span class="out">$output</span></pre>
+</div>
+
+<div class="arrow"></div>
+
+<div class="win">
+  <div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>$pptx</span></div>
+  <div class="slide">
+    <img src="$mol_png">
+    <svg width="$slide_w" height="$slide_h">
+      <line x1="$line_from_x" y1="$line_from_y" x2="$line_to_x" y2="$line_to_y"
+            stroke="$select" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="$box_from_x" y1="$box_from_y" x2="$box_to_x" y2="$box_to_y"
+            stroke="$select" stroke-width="1" stroke-dasharray="3 3"/>
+    </svg>
+    <div class="sel" style="left: ${box_x}px; top: ${box_y}px; width: ${box_w}px; height: ${box_h}px"></div>
+    $handles
+    <div class="label" style="left: ${line_label_x}px; top: ${line_label_y}px">$line_name<em>line</em></div>
+    <div class="label" style="right: ${box_label_right}px; top: ${box_label_y}px">$box_name<em>text box</em></div>
+  </div>
+</div>
+
+</body></html>
